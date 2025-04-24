@@ -39,11 +39,9 @@ function App() {
           </a>
         </div>
       </div>
-      <div className="grid grid-rows-1 md:grid-cols-2 auto-rows-fr gap-4 mt-[4em] max-w-5xl">
+      <div className="grid grid-rows-1 md:grid-cols-2 auto-rows-fr gap-4 mt-[4em] max-w-5xl px-4">
         {CUBIE_SHOWCASE_REPOS.map((repo) => (
-          <div key={repo.title} className="h-full">
-            <RepoCard {...repo} />
-          </div>
+          <RepoCard key={repo.title} {...repo} />
         ))}
       </div>
     </div>

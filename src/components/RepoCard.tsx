@@ -26,7 +26,7 @@ export function RepoCard({
   footer,
 }: RespoCardProps) {
   return (
-    <Card className="h-full">
+    <Card className="h-full justify-around">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
@@ -34,33 +34,31 @@ export function RepoCard({
       <CardContent>
         <p>{content}</p>
       </CardContent>
-      <CardFooter>
-        <div className="flex justify-end w-full gap-4">
-          {footer.docs && (
-            <a href={footer.docs} target="_blank">
-              <Button variant={"secondary"}>
-                <Code className="w-4 h-4 mr-2" />
-                Docs
-              </Button>
-            </a>
-          )}
-          {footer.github && (
-            <a href={footer.github} target="_blank">
-              <Button variant={"default"}>
-                <Github className="w-4 h-4 mr-2" />
-                GitHub
-              </Button>
-            </a>
-          )}{" "}
-          {footer.npm && (
-            <a href={footer.npm} target="_blank" className="text-blue-500">
-              <Button variant={"outline"}>
-                <Package className="w-4 h-4 mr-2" />
-                NPM
-              </Button>
-            </a>
-          )}
-        </div>
+      <CardFooter className="flex justify-end w-full gap-4">
+        {footer.docs && (
+          <a href={footer.docs} target="_blank">
+            <Button variant={"secondary"}>
+              <Code className="w-4 h-4 mr-2" />
+              Docs
+            </Button>
+          </a>
+        )}
+        {footer.github && (
+          <a href={footer.github} target="_blank">
+            <Button variant={"default"}>
+              <Github className="w-4 h-4 mr-2" />
+              GitHub
+            </Button>
+          </a>
+        )}{" "}
+        {footer.npm && (
+          <a href={footer.npm} target="_blank" className="text-blue-500">
+            <Button variant={"outline"}>
+              <Package className="w-4 h-4 mr-2" />
+              NPM
+            </Button>
+          </a>
+        )}
       </CardFooter>
     </Card>
   );
