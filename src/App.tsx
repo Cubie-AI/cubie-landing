@@ -1,10 +1,12 @@
 import { Code, Github, Twitter } from "lucide-react";
+import { RepoCard } from "./components/RepoCard";
 import { Button } from "./components/ui/button";
+import { CUBIE_SHOWCASE_REPOS } from "./data/repos";
 
 function App() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <div className="-mt-[15%]">
+      <div className="-mt-[9%]">
         <div className="flex items-center gap-4 mb-2">
           <img
             src="/favicon.png"
@@ -36,6 +38,13 @@ function App() {
             </Button>
           </a>
         </div>
+      </div>
+      <div className="grid grid-rows-1 md:grid-cols-2 auto-rows-fr gap-4 mt-[4em] max-w-5xl">
+        {CUBIE_SHOWCASE_REPOS.map((repo) => (
+          <div key={repo.title} className="h-full">
+            <RepoCard {...repo} />
+          </div>
+        ))}
       </div>
     </div>
   );
