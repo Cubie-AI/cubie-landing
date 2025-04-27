@@ -1,12 +1,14 @@
 import { Code, Github, Twitter } from "lucide-react";
 import { RepoCard } from "./components/RepoCard";
 import { Button } from "./components/ui/button";
+import { ScrollArea } from "./components/ui/scroll-area";
 import { CUBIE_SHOWCASE_REPOS } from "./data/repos";
 
 function App() {
+  const rows = Math.ceil(CUBIE_SHOWCASE_REPOS.length / 2);
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <div className="-mt-[9%]">
+      <div className="">
         <div className="flex items-center gap-4 mb-2">
           <img
             src="/favicon.png"
@@ -39,11 +41,15 @@ function App() {
           </a>
         </div>
       </div>
-      <div className="grid grid-rows-1 md:grid-cols-2 auto-rows-fr gap-4 mt-[4em] max-w-5xl px-4">
-        {CUBIE_SHOWCASE_REPOS.map((repo) => (
-          <RepoCard key={repo.title} {...repo} />
-        ))}
-      </div>
+      <ScrollArea className="w-full max-w-5xl mt-4">
+        <div
+          className={`grid grid-rows-${rows} md:grid-cols-2 auto-rows-fr gap-4 mt-[4em] max-w-5xl px-4`}
+        >
+          {CUBIE_SHOWCASE_REPOS.map((repo) => (
+            <RepoCard key={repo.title} {...repo} />
+          ))}
+        </div>
+      </ScrollArea>
     </div>
   );
 }

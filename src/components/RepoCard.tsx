@@ -39,7 +39,7 @@ export function RepoCard({
           <a href={footer.docs} target="_blank">
             <Button variant={"secondary"}>
               <Code className="w-4 h-4 mr-2" />
-              Docs
+              docs
             </Button>
           </a>
         )}
@@ -47,7 +47,7 @@ export function RepoCard({
           <a href={footer.github} target="_blank">
             <Button variant={"default"}>
               <Github className="w-4 h-4 mr-2" />
-              GitHub
+              github
             </Button>
           </a>
         )}{" "}
@@ -55,7 +55,7 @@ export function RepoCard({
           <a href={footer.npm} target="_blank" className="text-blue-500">
             <Button variant={"outline"}>
               <Package className="w-4 h-4 mr-2" />
-              NPM
+              npm
             </Button>
           </a>
         )}

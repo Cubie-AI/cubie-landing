@@ -22,4 +22,22 @@ export const CUBIE_SHOWCASE_REPOS = [
       docs: "https://github.com/Cubie-AI/solana-mcp/blob/main/RESOURCES.md",
     },
   },
+  {
+    title: "@cubie-ai/tiny-ai-examples",
+    description: "A collection of examples for tiny-ai.",
+    content:
+      "This repository contains a collection of examples for tiny-ai. These examples are designed to be simple and easy to understand, while also demonstrating the power and flexibility of the framework.",
+    footer: {
+      github: "https://github.com/cubie-ai/tiny-ai-examples",
+    },
+  },
+  {
+    title: "@cubie-ai/infinte-cubes",
+    description: "Infinite backrooms built using @cubie-ai/tiny-ai.",
+    content:
+      "Connect to 2 AI angents to to explore their interests, curriesties and more, infinitely.",
+    footer: {
+      github: "https://github.com/cubie-ai/infinite-cubes",
+    },
+  },
 ];
