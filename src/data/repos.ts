@@ -35,7 +35,7 @@ export const CUBIE_SHOWCASE_REPOS = [
     title: "@cubie-ai/infinte-cubes",
     description: "Infinite backrooms built using @cubie-ai/tiny-ai.",
     content:
-      "Connect to 2 AI angents to to explore their interests, curriesties and more, infinitely.",
+      "Connect 2 AI agents in a chat and let them explore their interests, and more, infinitely.",
     footer: {
       github: "https://github.com/cubie-ai/infinite-cubes",
     },
